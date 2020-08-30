@@ -85,7 +85,7 @@ p {
     }
 .footer {
     grid-area: footer;
-    position: relative;
+    position: absolute;
     bottom: 0px;
     background-color: #f1f1f1;
     padding: 10px;
