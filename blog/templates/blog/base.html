@@ -1,7 +1,11 @@
 {% load static %}
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>It'sa me, blogio</title>
+
+        <link rel="shortcut icon" type = "image/png" href="{% static 'favicon/favicon.ico' %}"/>
+
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -11,11 +15,6 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div class="to-add">
-            {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% endif %}
-        </div>
         <div class="grid-container">
             <div class="header">
                 <h1><a href="/">It's a blog</a></h1>
@@ -26,16 +25,19 @@
             <div class="nav">
                 <div id="navbar">
                     <a class="active" href="/">Home</a>
-                    <a href="javascript:void(0)">About</a>
+                    <a href="/about">About</a>
                     <a href="#end">Contact</a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'post_new' %}"><span>Add Post</span></a>
+                    {% endif %}
                   </div>
             </div>
 
             <div class="main">
-                <div class="content container">
-                    {% block content %}
-                    {% endblock %}
-                </div>
+                
+                {% block content %}
+                {% endblock %}
+                
             </div>  
   
             <div class="footer">
