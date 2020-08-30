@@ -6,6 +6,6 @@
             <a class="btn btn-default" href="{% url 'about_post_edit' pk=about_post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %}       
         <h2>{{ about_post.title }}</h2>
-        <p>{{ about_post.text|linebreaksbr }}</p>
+        <p>{{ about_post.text|safe }}</p>
     </div>
 {% endblock %}

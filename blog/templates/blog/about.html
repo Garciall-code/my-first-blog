@@ -4,7 +4,7 @@
     {% for about_post in about_posts %}
         <div class="post_detail"> 
             <h2><a href="{% url 'about_post_detail' pk=about_post.pk %}">{{ about_post.title }}</a></h2>
-            <p>{{ about_post.text|linebreaksbr }}</p>
+            <p>{{ about_post.text|safe }}</p>
         </div>
     {% endfor %}
 {% endblock %}
