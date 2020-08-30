@@ -56,7 +56,7 @@ p {
     border: 2px solid #C0C0C0;
     position: relative;
     }
-.post h2 a, .post h2 a:visited, .post_detail h2, .post_detail a:visited {
+.post h2 a, .post h2 a:visited, .post_detail h2 a, .post_detail a:visited {
     color: #000000;
     font-weight: bold;
     font-family: 'Inconsolata', monospace;
@@ -85,7 +85,7 @@ p {
     }
 .footer {
     grid-area: footer;
-    position: absolute;
+    position: relative;
     bottom: 0px;
     background-color: #f1f1f1;
     padding: 10px;
