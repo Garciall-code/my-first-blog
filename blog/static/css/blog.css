@@ -127,7 +127,8 @@ p {
     display: inline-block;
     color: black;
     font-family: 'Inconsolata', monospace;
-    padding: 0px 5% 0 5%;
+    padding: 0px 2% 0 2%;
+    margin: 0 2% 0 2%;
     text-decoration: none;
     font-size: 23px;
     border-bottom: 2px solid #ABB2B9;
