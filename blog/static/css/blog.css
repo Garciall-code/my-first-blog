@@ -52,7 +52,7 @@ p {
     overflow: hidden;
     text-overflow: ellipsis;
     font-family: 'Montserrat', sans-serif;
-    background-image: linear-gradient(to bottom, transparent 350px, #3A3A3A);
+    background-image: linear-gradient(to bottom, transparent 375px, #3A3A3A);
     border: 2px solid #C0C0C0;
     position: relative;
     }
