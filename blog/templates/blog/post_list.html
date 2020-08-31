@@ -7,7 +7,7 @@
             <div class="date">
                 {{ post.published_date }}
             </div>
-            {% if post.text|length > 700 or post.image %}
+            {% if post.text|length > 500 or post.image %}
                 <div class="read_more">
                     <a href="{% url 'post_detail' pk=post.pk %}">Read more</a>
                 </div>
