@@ -2,7 +2,7 @@
 
 {% block content %}
     {% for post in posts %}
-        {% if post.text|length > 600 or post.image %}
+        {% if post.text|length > 800 or post.image %}
             <div class="post">
                 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
                 <div class="date">
